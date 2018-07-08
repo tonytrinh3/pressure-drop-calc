@@ -1,0 +1,63 @@
+table th {
+    font-size: 16px;
+    border: 1px solid black;
+
+}
+
+table td  {
+    border: 1px solid black;
+}
+
+
+
+/* this is for button styling */
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* this is for button change color */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* this is to show position of the dropdown, but why a whole class above button itself */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* styling lettering of dropdown content */
+
+.dropdown-content a {
+    color: red;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* this is for change color when hover mouse */
+
+.dropdown a:hover {background-color: #ddd}
+
+/* ??? */
+
+.show {display:block;}
+

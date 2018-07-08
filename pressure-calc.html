@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <title>Pressure Calc</title>
+    <h1>Pressure Drop Calc </h1>
+    <script src= "C:\Users\Tony\Documents\coding\pressure-calc\calc.js"></script>
+    <link rel="stylesheet" type="text/css" href = "C:\Users\Tony\Documents\coding\pressure-calc\pressure-calc-style.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Node</th>
+            <th>Description</th>
+            <th>Item (duct, fitting, device)</th>
+            <th>Duct Dia</th>
+            <th>Quantity (# or ft)</th>
+            <th>Air Flow</th>
+            <th>Fitting Loss Coefficient (drop down)</th>
+            <th>Fitting Loss Coefficient </th>
+            <th>Material (galvanized, stainless, aluminum)</th>
+            <th>Duct Type</th>
+            <th>Equivalent Diameter</th>
+            <th>Velocity</th>
+            <th>Velocity Pressure</th>
+            <th>Reynold's Number</th>
+            <th>Roughness</th>
+            <th>Friction Factor</th>
+            <th>Pressure Drop/100 ft (in wc)</th>
+            <th>Pressure Drop (in wc)</th>
+            <th>Pressure Drop Device (in wc)</th>
+            <th>Cumulative Pressure Drop (in wc)</th>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td><input type="text" id="name"></td> <!--need to be user input here -->
+            <td><input type="text" id="item" value="Duct"></td> <!--need to be drop down menu -->
+            <td><input type="text" id="ductDia" value="10x10"></td> <!--user input in inch -->
+            <td><input type="text" id="quantity" value=1></td> <!--user input in ft-->
+            <td><input type="text" id="airFlow" value=100></td> <!--need to be user input here - need to have the option for user to set it equal to a previous cell so change one cell = change multiple - need to link  -->
+            <td>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="https://www.amazon.com/" target="_blank" >Duct</a>
+                        <a href="#about" target="_blank">Elbow, Smooth Radius (Die Stamped)</a>
+                        <a href="#contact" target="_blank">Device</a>
+                    </div>
+                </div>
+            </td> <!--this shouldn't be able to input if drop down choose duct -->
+            <td><input type="text" id="fitLossCoeff" value=0.71></td> <!--should just be zero or a dash  -->
+            <td><input type="text" id="material" value= "galvanized"></td> <!--needs to be drop down menu, affects roughness-->
+            <td id ="ductType">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id = "equivDia" >awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="vel">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id = "velPressure">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="Re">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="roughness">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="fr">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="p100f">awef</td><!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="pf">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id="pfDev">awef</td> <!--user input - need to affect overall total friction drop cumulative?  -->
+            <td id ="pfCum">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+
+        </tr>
+        <tr>
+            <td>110</td> 
+            <td>90 deg round elbow</td> <!--need to be user input here -->
+            <td><input type="text" id="myText1" value="Duct, Fitting, Device"></td> <!--need to be drop down menu -->
+            <td>10</td>
+            <td>1aa</td>
+            <td>500</td>
+            <td>Elbow, Smooth Radius (Die Stamped)</td> <!--when this is chosen, should Radius be asked as well? how do you add more columns to take this into account? should this pop up a prompt? -->
+            <td>0.15</td>
+            <td id = "material">rw3</td>
+            <td id ="ductType">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id = "equivDia" >awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="vel">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id = "velPressure">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="Re">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="roughness">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="fr">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="p100f">awef</td><!--need to auto calculate and populate while people add their inputs? -->
+            <td id ="pf">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+            <td id="pfDev">awef</td> <!--user input - need to affect overall total friction drop cumulative?  -->
+            <td id ="pfCum">awef</td> <!--need to auto calculate and populate while people add their inputs? -->
+
+        </tr>
+    </table>
+    <p id="demo"></p>
+    
+    
+
+    <button onclick="pressureCalc()">Try it</button>
+
+
+
+
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="https://www.amazon.com/" target="_blank" >Duct</a>
+        <a href="#about" target="_blank">Fitting</a>
+        <a>Device</a>
+    </div>
+</div>
+
+
+
+
+</body>
+
+</html>
